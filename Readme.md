@@ -23,6 +23,34 @@ cd my-app
 ng serve
 ```
 
+## Remarks
+
+### Local and global Angular CLI versions mismatched issue
+It is necessary to have both a global and local install for the `ng` tools to work.
+
+If you try to run `ng serve` on an application without the local install of the CLI (global install only), you will get the following error.
+
+> Your global Angular CLI version (8.3.25) is greater than your local version (7.0.7). The local Angular CLI version is used.
+
+Please take the following steps to avoid issues:
+
+```
+npm install --save-dev @angular/cli@latest
+```
+
+```
+npm install --save-dev @angular/cli@latest
+```
+
+### Global typescript version issue
+
+The Angular Compiler requires TypeScript >=3.4.0 and <3.6.0 but 3.7.5 was found instead
+
+```
+npm i --save-dev typescript@3.5.3
+```
+
+
 ## References
 
 https://angular.io/start
